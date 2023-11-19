@@ -55,7 +55,7 @@ def on_change(state, var_name, var_val):
     if var_name == "content":
         top_prob, top_pred = predict_image(model, var_val)
         state.prob = round(top_prob * 100)
-        state.pred = "this is a " + top_pred
+        state.pred = f"this is a {top_pred}"
         state.img_path = var_val
     #print(var_name, var_val)
 
